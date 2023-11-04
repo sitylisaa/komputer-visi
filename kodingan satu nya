@@ -1,0 +1,13 @@
+import cv2
+
+# Membaca foto
+image = cv2.imread('siti.jpg')
+
+# Mengubah ukuran foto menjadi 100x100
+resized_image = cv2.resize(image, (100, 100))
+
+# Mengonversi foto menjadi hitam putih
+grayscale_image = cv2.cvtColor(resized_image, cv2.COLOR_BGR2GRAY)
+
+# Menyimpan foto hitam putih
+cv2.imwrite('foto_hitam_putih.jpg', grayscale_image)
